@@ -27,6 +27,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite_ADO", "WebSite_ADO\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{D7986BF9-49A9-47BF-A9D3-6EC39F2C9909}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RAR", "RAR", "{7F47D396-2B73-4C0E-82CC-7BEDB7E8CB9F}"
+	ProjectSection(SolutionItems) = preProject
+		..\NET DEMO.zip = ..\NET DEMO.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

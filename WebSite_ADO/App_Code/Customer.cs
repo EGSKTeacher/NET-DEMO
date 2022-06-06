@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-/// <summary>
-/// Customer 的摘要描述
-/// </summary>
 public class Customer
 {
     public string CustomerID { get; set; }

@@ -16,9 +16,22 @@
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="ObjectDataSource1" ForeColor="Black" GridLines="Horizontal">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                    <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
+                    <asp:BoundField DataField="CustomerID" HeaderText="客戶編號" SortExpression="CustomerID" />
                     <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
-                    <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
+                    <asp:TemplateField HeaderText="Country" SortExpression="Country">
+                        <EditItemTemplate>
+                            <%--<asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Country") %>'></asp:TextBox>--%>
+                            <asp:DropDownList ID="DropDownList1" runat="server"
+                                DataSourceID="ObjectDataSource2" SelectedValue='<%# Bind("Country") %>'>
+                            </asp:DropDownList>
+                            <asp:ObjectDataSource ID="ObjectDataSource2" runat="server"
+                                SelectMethod="GetCountries" TypeName="CustomerUtility"></asp:ObjectDataSource>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("Country") %>'></asp:Label>
+                            -XXX
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />

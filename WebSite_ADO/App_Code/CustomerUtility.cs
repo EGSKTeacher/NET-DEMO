@@ -124,4 +124,24 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
         sqlCommand.ExecuteNonQuery();
         sqlConnection.Close();
     }
+
+    public List<string> GetCountries()
+    {
+        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(
+           "select distinct Country from Customers",
+           this.ConnectionString
+           );
+
+        DataTable table = new DataTable();
+
+        sqlDataAdapter.Fill(table);
+
+        //DataTable => List<string>
+        List<string> countries =
+            table.AsEnumerable().
+            Select(row => row["Country"].ToString())
+            .ToList();
+
+        return countries;
+    }
 }

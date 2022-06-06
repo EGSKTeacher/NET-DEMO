@@ -77,4 +77,19 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
         sqlCommand.ExecuteNonQuery();
         sqlConnection.Close();
     }
+
+    public void Delete(string customerId)
+    {
+        SqlConnection sqlConnection = new SqlConnection(this.ConnectionString);
+
+        SqlCommand sqlCommand = new SqlCommand(
+                "delete Customers where CustomerId = @CustomerId",
+            sqlConnection);
+
+        sqlCommand.Parameters.AddWithValue("@CustomerId", customerId);
+
+        sqlConnection.Open();
+        sqlCommand.ExecuteNonQuery();
+        sqlConnection.Close();
+    }
 }

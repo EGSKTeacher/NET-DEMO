@@ -50,16 +50,18 @@
                 <HeaderTemplate>
                     <table id="customers">
                         <tr>
-                            <th>Company</th>
-                            <th>Contact</th>
+                            <th>CustomerId</th>
+                            <th>CompanyName</th>
                             <th>Country</th>
+                            <th>City</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
+                        <td><%# Eval("CustomerId") %></td>
+                        <td><%# Eval("CompanyName") %></td>
+                        <td><%# Eval("Country") %></td>
+                        <td><%# Eval("City") %></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

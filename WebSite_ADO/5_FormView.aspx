@@ -4,6 +4,10 @@
 
 <script runat="server">
 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Template + binding
+    }
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,14 +22,23 @@
                     CustomerID:
                     <asp:TextBox ID="CustomerIDTextBox" runat="server" Text='<%# Bind("CustomerID") %>' />
                     <br />
+                    <br />
                     CompanyName:
                     <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' />
                     <br />
+                    <br />
                     Country:
                     <asp:TextBox ID="CountryTextBox" runat="server" Text='<%# Bind("Country") %>' />
+                    <asp:DropDownList ID="DropDownList1" runat="server" 
+                        DataSourceID="ObjectDataSource2"></asp:DropDownList>
+                    <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" 
+                        SelectMethod="GetCountries" TypeName="CustomerUtility">
+                    </asp:ObjectDataSource>
+                    <br />
                     <br />
                     City:
                     <asp:TextBox ID="CityTextBox" runat="server" Text='<%# Bind("City") %>' />
+                    <br />
                     <br />
                     <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                     &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -50,17 +63,21 @@
                     &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                 </InsertItemTemplate>
                 <ItemTemplate>
-                    CustomerID:
-                    <asp:Label ID="CustomerIDLabel" runat="server" Text='<%# Bind("CustomerID") %>' />
+                    客戶編號:
+                    <asp:Label ID="CustomerIDLabel" runat="server" Text='<%# Eval("CustomerID") %>' />
+                    <br />
                     <br />
                     CompanyName:
                     <asp:Label ID="CompanyNameLabel" runat="server" Text='<%# Bind("CompanyName") %>' />
                     <br />
+                    <br />
                     Country:
                     <asp:Label ID="CountryLabel" runat="server" Text='<%# Bind("Country") %>' />
                     <br />
+                    <br />
                     City:
                     <asp:Label ID="CityLabel" runat="server" Text='<%# Bind("City") %>' />
+                    <br />
                     <br />
                     <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                     &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />

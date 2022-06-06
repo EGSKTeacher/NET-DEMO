@@ -28,9 +28,9 @@
                     <br />
                     <br />
                     Country:
-                    <asp:TextBox ID="CountryTextBox" runat="server" Text='<%# Bind("Country") %>' />
+                    <%--<asp:TextBox ID="CountryTextBox" runat="server" Text='<%# Bind("Country") %>' />--%>
                     <asp:DropDownList ID="DropDownList1" runat="server" 
-                        DataSourceID="ObjectDataSource2"></asp:DropDownList>
+                        DataSourceID="ObjectDataSource2" SelectedValue='<%# Bind("Country") %>'></asp:DropDownList>
                     <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" 
                         SelectMethod="GetCountries" TypeName="CustomerUtility">
                     </asp:ObjectDataSource>

@@ -4,6 +4,13 @@
 
 <script runat="server">
 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        CustomerUtility utility = new CustomerUtility();
+
+        GridView1.DataSource = utility.GetCustomers();
+        GridView1.DataBind();
+    }
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,9 +20,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Hello 1236</h1>
+            <h1>Hello </h1>
             <p>&nbsp;</p>
-            <p>&nbsp;</p>
+            <p>
+                <asp:GridView ID="GridView1" runat="server">
+                </asp:GridView>
+            </p>
             <p>&nbsp;</p>
         </div>
     </form>

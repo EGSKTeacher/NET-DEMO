@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <asp:ListView ID="ListView1" runat="server" DataSourceID="ObjectDataSource1" InsertItemPosition="LastItem">
             <AlternatingItemTemplate>
-                <tr style="background-color: #FFFFFF;color: #284775;">
+                <tr style="background-color: #FFFFFF; color: #284775;">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
@@ -46,7 +46,12 @@
                         <asp:TextBox ID="CompanyNameTextBox" runat="server" Text='<%# Bind("CompanyName") %>' />
                     </td>
                     <td>
-                        <asp:TextBox ID="CountryTextBox" runat="server" Text='<%# Bind("Country") %>' />
+                        <%--<asp:TextBox ID="CountryTextBox" runat="server" Text='<%# Bind("Country") %>' />--%>
+                        <asp:DropDownList ID="DropDownList1" runat="server"
+                            DataSourceID="ObjectDataSource2" SelectedValue='<%# Bind("Country") %>'>
+                        </asp:DropDownList>
+                        <asp:ObjectDataSource ID="ObjectDataSource2" runat="server"
+                            SelectMethod="GetCountries" TypeName="CustomerUtility"></asp:ObjectDataSource>
                     </td>
                     <td>
                         <asp:TextBox ID="CityTextBox" runat="server" Text='<%# Bind("City") %>' />
@@ -54,7 +59,7 @@
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px;">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -81,13 +86,12 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color: #E0FFFF;color: #333333;">
+                <tr style="background-color: #E0FFFF; color: #333333;">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
                     </td>
-                    <td>
-                        <asp:Label ID="CustomerIDLabel" runat="server" Text='<%# Eval("CustomerID") %>' />
+                    <td>XXX-<asp:Label ID="CustomerIDLabel" runat="server" Text='<%# Eval("CustomerID") %>' />
                     </td>
                     <td>
                         <asp:Label ID="CompanyNameLabel" runat="server" Text='<%# Eval("CompanyName") %>' />
@@ -104,8 +108,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
+                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px; font-family: Verdana, Arial, Helvetica, sans-serif;">
+                                <tr runat="server" style="background-color: #E0FFFF; color: #333333;">
                                     <th runat="server"></th>
                                     <th runat="server">CustomerID</th>
                                     <th runat="server">CompanyName</th>
@@ -118,8 +122,8 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF">
-                            <asp:DataPager ID="DataPager1" runat="server">
+                        <td runat="server" style="text-align: center; background-color: #5D7B9D; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF">
+                            <asp:DataPager ID="DataPager1" runat="server" PageSize="5">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
                                 </Fields>
@@ -129,7 +133,7 @@
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color: #E2DED6;font-weight: bold;color: #333333;">
+                <tr style="background-color: #E2DED6; font-weight: bold; color: #333333;">
                     <td>
                         <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                         <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />

@@ -13,4 +13,9 @@ public class CustomerUtility
         ConnectionString =
 ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionString;
     }
+
+    public void GetCustomers()
+    {
+
+    }
 }

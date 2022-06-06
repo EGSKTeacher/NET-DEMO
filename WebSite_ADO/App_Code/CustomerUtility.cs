@@ -39,4 +39,23 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
 
         return customers;
     }
+
+    public void Insert(string customerId , string companyName , string country , string city)
+    {
+        SqlConnection sqlConnection = new SqlConnection(this.ConnectionString);
+
+        SqlCommand sqlCommand = new SqlCommand(
+            "insert into Customers (CustomerID , CompanyName , Country , City) " +
+            "values(@CustomerID , @CompanyName , @Country , @City)",
+            sqlConnection);
+
+        sqlCommand.Parameters.AddWithValue("@CustomerID", customerId);
+        sqlCommand.Parameters.AddWithValue("@CompanyName", companyName);
+        sqlCommand.Parameters.AddWithValue("@Country", country);
+        sqlCommand.Parameters.AddWithValue("@City", city);
+
+        sqlConnection.Open();
+        sqlCommand.ExecuteNonQuery();
+        sqlConnection.Close();
+    }
 }

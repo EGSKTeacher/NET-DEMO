@@ -47,20 +47,24 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="fname">CustomerId</label>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="lname">CompanyName</label>
+            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
 
             <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
+            <asp:DropDownList ID="DropDownList1" runat="server"
+                DataSourceID="ObjectDataSource2">
+            </asp:DropDownList>
+            <asp:ObjectDataSource ID="ObjectDataSource2" runat="server"
+                SelectMethod="GetCountries" TypeName="CustomerUtility"></asp:ObjectDataSource>
 
-            <input type="submit" value="Submit">
+            <label for="fname">City</label>
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+
+            <%--<input type="submit" value="Submit">--%>
+            <asp:Button ID="Button1" runat="server" Text="Add Customer" />
         </div>
     </form>
 </body>

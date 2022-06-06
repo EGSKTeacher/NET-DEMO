@@ -46,6 +46,8 @@
             <h1>A Fancy Table</h1>
 
 
+            <a href="9_AddCustomer.aspx">Add Customer</a>
+
             <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ObjectDataSource1">
                 <HeaderTemplate>
                     <table id="customers">

@@ -3,8 +3,23 @@
 <!DOCTYPE html>
 
 <script runat="server">
-//https://www.w3schools.com/css/css_table.asp
-//https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy
+    //https://www.w3schools.com/css/css_table.asp
+    //https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Button btn = sender as Button;
+        
+        //Response.Write( btn.CommandArgument);
+
+        CustomerUtility utility = new CustomerUtility();
+        utility.Delete(btn.CommandArgument);
+
+        Repeater1.DataBind();
+
+        Response.Write("Delete done");
+
+    }
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -56,6 +71,7 @@
                             <th>CompanyName</th>
                             <th>Country</th>
                             <th>City</th>
+                            <th></th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -64,6 +80,13 @@
                         <td><%# Eval("CompanyName") %></td>
                         <td><%# Eval("Country") %></td>
                         <td><%# Eval("City") %></td>
+                        <td>
+                            <asp:Button ID="Button1" runat="server" Text="Delete"
+                                CommandArgument='<%# Eval("CustomerId") %>'
+                                OnClick="Button1_Click"
+                                OnClientClick="return confirm('Delete?');"
+                                />
+                        </td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

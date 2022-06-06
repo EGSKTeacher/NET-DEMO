@@ -3,9 +3,22 @@
 <!DOCTYPE html>
 
 <script runat="server">
-//https://www.w3schools.com/css/css_form.asp
-//https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
+    //https://www.w3schools.com/css/css_form.asp
+    //https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
 
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        CustomerUtility utility = new CustomerUtility();
+
+        utility.Insert(
+            TextBox1.Text,
+            TextBox2.Text,
+            DropDownList1.SelectedValue,
+            TextBox3.Text
+            );
+
+        Response.Redirect("~/9_Repeater.aspx");
+    }
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -64,7 +77,7 @@
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
 
             <%--<input type="submit" value="Submit">--%>
-            <asp:Button ID="Button1" runat="server" Text="Add Customer" />
+            <asp:Button ID="Button1" runat="server" Text="Add Customer" OnClick="Button1_Click" />
         </div>
     </form>
 </body>

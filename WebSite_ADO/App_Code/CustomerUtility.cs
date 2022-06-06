@@ -42,6 +42,10 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
 
     public List<Customer> GetCustomersByCountry(string country)
     {
+        if (country == null)
+        {
+            return null;
+        }
         SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(
            "select * from Customers where Country=@Country",
            this.ConnectionString

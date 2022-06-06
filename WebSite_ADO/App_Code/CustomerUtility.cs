@@ -40,6 +40,34 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
         return customers;
     }
 
+    public List<Customer> GetCustomersByCountry(string country)
+    {
+        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(
+           "select * from Customers where Country=@Country",
+           this.ConnectionString
+           );
+
+        sqlDataAdapter.SelectCommand.Parameters.AddWithValue(
+            "@Country", country);
+
+        DataTable table = new DataTable();
+
+        sqlDataAdapter.Fill(table);
+
+        //DataTable => List<Customer>
+        List<Customer> customers =
+            table.AsEnumerable().
+            Select(row => new Customer()
+            {
+                CustomerID = row["CustomerID"].ToString(),
+                CompanyName = row["CompanyName"].ToString(),
+                Country = row["Country"].ToString(),
+                City = row["City"].ToString()
+            }).ToList();
+
+        return customers;
+    }
+
     public void Insert(string customerId, string companyName, string country, string city)
     {
         SqlConnection sqlConnection = new SqlConnection(this.ConnectionString);

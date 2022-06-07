@@ -144,4 +144,32 @@ ConfigurationManager.ConnectionStrings["NorthwindConnectionString1"].ConnectionS
 
         return countries;
     }
+
+    public List<Customer> GetCustomersById(string customerId)
+    {
+        SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(
+           "select * from Customers where CustomerId=@CustomerId",
+           this.ConnectionString
+           );
+
+        sqlDataAdapter.SelectCommand.Parameters.AddWithValue(
+            "@CustomerId", customerId);
+
+        DataTable table = new DataTable();
+
+        sqlDataAdapter.Fill(table);
+
+        //DataTable => List<Customer>
+        List<Customer> customers =
+            table.AsEnumerable().
+            Select(row => new Customer()
+            {
+                CustomerID = row["CustomerID"].ToString(),
+                CompanyName = row["CompanyName"].ToString(),
+                Country = row["Country"].ToString(),
+                City = row["City"].ToString()
+            }).ToList();
+
+        return customers;
+    }
 }

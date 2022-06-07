@@ -40,5 +40,27 @@ namespace WindowsFormsApp1
             //this.button1.Text = "ShowMessageBox";
             this.Text = "first windows form";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.TopMost = true;
+
+            f.Show();
+        }
+
+        private Form MyForm2;
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MyForm2 = new Form2();
+            MyForm2.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MyForm2.Close();
+        }
     }
 }

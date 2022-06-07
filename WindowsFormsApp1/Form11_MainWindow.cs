@@ -21,8 +21,9 @@ namespace WindowsFormsApp1
         {
             Form10_Dock f = new Form10_Dock();
             f.StartPosition = FormStartPosition.CenterScreen;
-            
             f.ShowDialog();
+
+            this.label1.Text = f.UserName + " 您好!";
         }
     }
 }

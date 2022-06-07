@@ -16,5 +16,30 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "mary" && textBox2.Text == "123")
+            {
+                this.Close();
+            }
+            else
+            {
+                this.label3.Text = "Error!";
+            }
+        }
+
+        private void Form10_Dock_Load(object sender, EventArgs e)
+        {
+            this.textBox2.UseSystemPasswordChar = true;
+        }
+
+        public string UserName
+        {
+            get
+            {
+                return this.textBox1.Text;
+            }
+        }
     }
 }

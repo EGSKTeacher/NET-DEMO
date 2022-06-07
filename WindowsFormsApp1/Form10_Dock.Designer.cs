@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 13;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -107,6 +108,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBox2);
             this.Name = "Form10_Dock";
             this.Text = "Form10_Dock";
+            this.Load += new System.EventHandler(this.Form10_Dock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

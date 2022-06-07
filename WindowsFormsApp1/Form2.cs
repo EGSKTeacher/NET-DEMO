@@ -16,5 +16,16 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this.ControlBox = false;
+
+            //this.MinimizeBox = false;
+
+            //this.MaximizeBox = false;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
     }
 }

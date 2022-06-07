@@ -46,5 +46,17 @@ namespace WindowsFormsApp1
         {
             Console.WriteLine(textBox3.Text);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var source = new AutoCompleteStringCollection();
+            source.AddRange(
+                new string[] { "AA", "BB", "CC", "DD", "EE", "ABC", "DEF", "BBQ" }
+                ) ;
+
+            textBox4.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox4.AutoCompleteCustomSource = source;
+            textBox4.AutoCompleteMode = AutoCompleteMode.Suggest;
+        }
     }
 }

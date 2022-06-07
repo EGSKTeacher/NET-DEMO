@@ -58,6 +58,12 @@
     <Compile Include="Form10_Dock.Designer.cs">
       <DependentUpon>Form10_Dock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form11_MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11_MainWindow.Designer.cs">
+      <DependentUpon>Form11_MainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form10_Dock.resx">
       <DependentUpon>Form10_Dock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11_MainWindow.resx">
+      <DependentUpon>Form11_MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form13_TextBox());
+            Application.Run(new Form14_MaskedTextBox());
         }
     }
 }

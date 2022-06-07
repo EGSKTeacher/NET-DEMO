@@ -64,6 +64,12 @@
     <Compile Include="Form11_MainWindow.Designer.cs">
       <DependentUpon>Form11_MainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form12_Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12_Confirm.Designer.cs">
+      <DependentUpon>Form12_Confirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form11_MainWindow.resx">
       <DependentUpon>Form11_MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12_Confirm.resx">
+      <DependentUpon>Form12_Confirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

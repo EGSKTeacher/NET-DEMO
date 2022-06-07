@@ -86,6 +86,8 @@
                                 OnClick="Button1_Click"
                                 OnClientClick="return confirm('Delete?');"
                                 />
+                            |
+                            <a href='<%# Eval("CustomerId" , "9_EditCustomer.aspx?id={0}") %>'>Edit</a>
                         </td>
                     </tr>
                 </ItemTemplate>

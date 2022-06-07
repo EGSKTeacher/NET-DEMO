@@ -31,7 +31,14 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
+            f.Text = "open by form1";
             f.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //this.button1.Text = "ShowMessageBox";
+            this.Text = "first windows form";
         }
     }
 }

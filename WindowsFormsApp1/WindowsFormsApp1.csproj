@@ -70,6 +70,12 @@
     <Compile Include="Form4_ListBox.Designer.cs">
       <DependentUpon>Form4_ListBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5_FlowLayoutPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_FlowLayoutPanel.Designer.cs">
+      <DependentUpon>Form5_FlowLayoutPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4_ListBox.resx">
       <DependentUpon>Form4_ListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_FlowLayoutPanel.resx">
+      <DependentUpon>Form5_FlowLayoutPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

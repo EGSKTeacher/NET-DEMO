@@ -25,5 +25,21 @@ namespace WindowsFormsApp1
 
             this.label1.Text = f.UserName + " 您好!";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form12_Confirm f = new Form12_Confirm();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            DialogResult result = f.ShowDialog();
+
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("檔案已經刪除");
+            }
+            else
+            {
+                MessageBox.Show("取消");
+            }
+        }
     }
 }

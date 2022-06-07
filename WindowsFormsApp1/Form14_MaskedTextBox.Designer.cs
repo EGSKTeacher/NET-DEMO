@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // maskedTextBox1
@@ -50,6 +51,7 @@ namespace WindowsFormsApp1
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox2.TabIndex = 1;
             this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox2.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox2_Validating);
             // 
             // maskedTextBox3
             // 
@@ -59,11 +61,21 @@ namespace WindowsFormsApp1
             this.maskedTextBox3.Size = new System.Drawing.Size(100, 22);
             this.maskedTextBox3.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(243, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
             // Form14_MaskedTextBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
@@ -79,5 +91,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

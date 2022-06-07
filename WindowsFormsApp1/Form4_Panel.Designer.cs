@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form4_ListBox
+    partial class Form4_Panel
     {
         /// <summary>
         /// Required designer variable.

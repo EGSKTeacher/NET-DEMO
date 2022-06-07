@@ -37,5 +37,21 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Button btn = new Button();
+            btn.Text = "testButton";
+            btn.Location = new Point(200, 100);
+
+            btn.Click += Btn_Click;
+
+            this.Controls.Add(btn);
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("test");
+        }
     }
 }

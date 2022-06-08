@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form20_NotifyIcon());
+            Application.Run(new Form21_ToolStrip());
         }
     }
 }

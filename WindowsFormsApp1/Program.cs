@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form18_DataBinding());
+            Application.Run(new Form19_TrackBar());
         }
     }
 }

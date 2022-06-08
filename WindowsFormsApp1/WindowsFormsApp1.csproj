@@ -106,6 +106,12 @@
     <Compile Include="Form18_DataBinding.Designer.cs">
       <DependentUpon>Form18_DataBinding.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form19_TrackBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19_TrackBar.Designer.cs">
+      <DependentUpon>Form19_TrackBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form18_DataBinding.resx">
       <DependentUpon>Form18_DataBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19_TrackBar.resx">
+      <DependentUpon>Form19_TrackBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

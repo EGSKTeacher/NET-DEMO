@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Console.WriteLine(comboBox2.SelectedItem);
+
+            Console.WriteLine(comboBox2.Text);
+        }
     }
 }

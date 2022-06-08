@@ -29,13 +29,29 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string[] ary = new string[] { "XX","YY","ZZ" };
+            string[] ary = new string[] { "XX", "YY", "ZZ" };
             listBox1.Items.AddRange(ary);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             listBox1.Items.Insert(0, "OO");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //listBox1.Items.Remove(listBox1.SelectedItem);
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Console.WriteLine(listBox1.SelectedItem);
+
+            foreach (var item in listBox1.SelectedItems)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 }

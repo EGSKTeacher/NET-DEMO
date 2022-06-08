@@ -43,5 +43,46 @@ namespace WindowsFormsApp1
         {
             this.textBox1.Paste();
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = File.ReadAllText(
+    toolStripTextBox1.Text
+    );
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(
+    toolStripTextBox1.Text,
+    textBox1.Text
+    );
+            MessageBox.Show("存檔完成");
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Copy();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Cut();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Paste();
+        }
     }
 }

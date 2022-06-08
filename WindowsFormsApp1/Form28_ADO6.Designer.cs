@@ -72,6 +72,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form28_ADO6";
             this.Text = "Form28_ADO6";
+            this.Load += new System.EventHandler(this.Form28_ADO6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void Form28_ADO6_Load(object sender, EventArgs e)
+        {
+            customersTableAdapter1.Fill(northwindDataSet1.Customers);
+
+            bindingSource1.DataSource = northwindDataSet1.Customers;
+
+            dataGridView1.DataSource = bindingSource1;
+
+        }
     }
 }

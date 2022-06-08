@@ -36,5 +36,16 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "Customers";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommandBuilder builder = new SqlCommandBuilder(sqlDataAdapter);
+
+            Console.WriteLine(builder.GetInsertCommand().CommandText);
+            Console.WriteLine(builder.GetUpdateCommand().CommandText);
+            Console.WriteLine(builder.GetDeleteCommand().CommandText);
+
+            sqlDataAdapter.Update(ds, "Customers");
+        }
     }
 }

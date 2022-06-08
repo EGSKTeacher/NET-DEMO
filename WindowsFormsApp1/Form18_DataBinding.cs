@@ -32,6 +32,16 @@ namespace WindowsFormsApp1
             comboBox1.DisplayMember = "Name";
             comboBox1.ValueMember = "Id";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            //Console.WriteLine(comboBox1.SelectedValue);
+
+            //Console.WriteLine(comboBox1.SelectedItem);
+            Member member = comboBox1.SelectedItem as Member;
+            Console.WriteLine(member.Name);
+        }
     }
 
     class Member

@@ -26,5 +26,15 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = bindingSource1;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.MoveNext();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.MovePrevious();
+        }
     }
 }

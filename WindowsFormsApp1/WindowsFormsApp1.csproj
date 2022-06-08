@@ -130,6 +130,12 @@
     <Compile Include="Form21_ToolStrip.Designer.cs">
       <DependentUpon>Form21_ToolStrip.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form22_Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22_Events.Designer.cs">
+      <DependentUpon>Form22_Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3_GroupBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form21_ToolStrip.resx">
       <DependentUpon>Form21_ToolStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form22_Events.resx">
+      <DependentUpon>Form22_Events.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3_GroupBox.resx">
       <DependentUpon>Form3_GroupBox.cs</DependentUpon>

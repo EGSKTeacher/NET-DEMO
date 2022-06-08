@@ -19,12 +19,30 @@ namespace WindowsFormsApp1
 
         private void Form20_NotifyIcon_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            //MessageBox.Show("不能關閉");
+            if (e.CloseReason != CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+                //MessageBox.Show("不能關閉");
 
-            this.Hide();
+                this.Hide();
 
-            notifyIcon1.ShowBalloonTip(2000);
+                notifyIcon1.ShowBalloonTip(2000);
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -62,7 +62,16 @@ namespace WindowsFormsApp1
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DialogResult result = saveFileDialog1.ShowDialog();
 
+            if (result == DialogResult.OK)
+            {
+                File.WriteAllText(
+                    saveFileDialog1.FileName,
+                    textBox1.Text
+                    );
+                MessageBox.Show("存檔完成");
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

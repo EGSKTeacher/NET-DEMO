@@ -151,6 +151,12 @@
     <Compile Include="Form24_ADO2.Designer.cs">
       <DependentUpon>Form24_ADO2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form25_ADO3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form25_ADO3.Designer.cs">
+      <DependentUpon>Form25_ADO3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3_GroupBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form24_ADO2.resx">
       <DependentUpon>Form24_ADO2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form25_ADO3.resx">
+      <DependentUpon>Form25_ADO3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3_GroupBox.resx">
       <DependentUpon>Form3_GroupBox.cs</DependentUpon>

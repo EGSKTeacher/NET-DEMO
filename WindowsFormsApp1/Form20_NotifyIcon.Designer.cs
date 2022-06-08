@@ -47,6 +47,9 @@ namespace WindowsFormsApp1
             // 
             // notifyIcon1
             // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "程式已縮小";
+            this.notifyIcon1.BalloonTipTitle = "Hello";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "MyDemo";
             this.notifyIcon1.Visible = true;
@@ -59,6 +62,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "Form20_NotifyIcon";
             this.Text = "Form20_NotifyIcon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form20_NotifyIcon_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void Form20_NotifyIcon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            //MessageBox.Show("不能關閉");
+
+            this.Hide();
+
+            notifyIcon1.ShowBalloonTip(2000);
+        }
     }
 }

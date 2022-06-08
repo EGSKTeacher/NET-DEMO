@@ -27,5 +27,16 @@ namespace WindowsFormsApp1
 
             listBox1.DisplayMember = "CustomerId";
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Customer customer = listBox1.SelectedItem as Customer;
+
+            label1.Text = customer.CustomerID;
+            label2.Text = customer.CompanyName;
+            label3.Text = customer.Country;
+            label4.Text = customer.City;
+
+        }
     }
 }

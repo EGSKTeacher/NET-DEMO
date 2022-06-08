@@ -36,5 +36,12 @@ namespace WindowsFormsApp1
         {
             this.bindingSource1.MovePrevious();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.bindingSource1.EndEdit();
+
+            this.tableAdapterManager1.UpdateAll(this.northwindDataSet1);
+        }
     }
 }

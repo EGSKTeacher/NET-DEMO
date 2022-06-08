@@ -88,6 +88,12 @@
     <Compile Include="Form15_ListBox.Designer.cs">
       <DependentUpon>Form15_ListBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form16_ComboBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16_ComboBox.Designer.cs">
+      <DependentUpon>Form16_ComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form15_ListBox.resx">
       <DependentUpon>Form15_ListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16_ComboBox.resx">
+      <DependentUpon>Form16_ComboBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

@@ -157,6 +157,24 @@
     <Compile Include="Form25_ADO3.Designer.cs">
       <DependentUpon>Form25_ADO3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form26_ADO4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form26_ADO4.Designer.cs">
+      <DependentUpon>Form26_ADO4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form27_ADO5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form27_ADO5.Designer.cs">
+      <DependentUpon>Form27_ADO5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form28_ADO6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form28_ADO6.Designer.cs">
+      <DependentUpon>Form28_ADO6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3_GroupBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +210,11 @@
     </Compile>
     <Compile Include="Form9_Layout.Designer.cs">
       <DependentUpon>Form9_Layout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,6 +272,15 @@
     <EmbeddedResource Include="Form25_ADO3.resx">
       <DependentUpon>Form25_ADO3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form26_ADO4.resx">
+      <DependentUpon>Form26_ADO4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form27_ADO5.resx">
+      <DependentUpon>Form27_ADO5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form28_ADO6.resx">
+      <DependentUpon>Form28_ADO6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3_GroupBox.resx">
       <DependentUpon>Form3_GroupBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +308,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="NorthwindDataSet.xsc">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NorthwindDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NorthwindDataSet.xss">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

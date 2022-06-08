@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -15,6 +16,22 @@ namespace WindowsFormsApp1
         public Form21_ToolStrip()
         {
             InitializeComponent();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = File.ReadAllText(
+                toolStripTextBox1.Text
+                );
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(
+                toolStripTextBox1.Text,
+                textBox1.Text
+                );
+            MessageBox.Show("存檔完成");
         }
     }
 }

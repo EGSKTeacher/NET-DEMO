@@ -33,5 +33,15 @@ namespace WindowsFormsApp1
                 );
             MessageBox.Show("存檔完成");
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Copy();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Paste();
+        }
     }
 }

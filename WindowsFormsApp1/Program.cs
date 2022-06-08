@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form16_ComboBox());
+            Application.Run(new Form17_CheckedListBox());
         }
     }
 }

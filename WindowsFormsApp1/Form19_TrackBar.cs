@@ -21,5 +21,16 @@ namespace WindowsFormsApp1
         {
             label1.Text = trackBar1.Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            trackBar1.Maximum = 100;
+            trackBar1.TickFrequency = 20;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            trackBar1.LargeChange = 20;
+        }
     }
 }

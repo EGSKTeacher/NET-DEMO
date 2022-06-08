@@ -82,6 +82,12 @@
     <Compile Include="Form14_MaskedTextBox.Designer.cs">
       <DependentUpon>Form14_MaskedTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form15_ListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15_ListBox.Designer.cs">
+      <DependentUpon>Form15_ListBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form14_MaskedTextBox.resx">
       <DependentUpon>Form14_MaskedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15_ListBox.resx">
+      <DependentUpon>Form15_ListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
